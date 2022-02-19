@@ -1,0 +1,6 @@
+com\yachay\model\Vocabulario.class
+com\yachay\servlets\Controlador.class
+com\yachay\model\Respuesta.class
+com\yachay\util\ConnectionDB.class
+com\yachay\interfaces\IVocabulario.class
+com\yachay\dao\DaoVocabulario.class
