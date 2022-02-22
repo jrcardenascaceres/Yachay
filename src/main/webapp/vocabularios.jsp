@@ -16,7 +16,7 @@
                 for (Vocabulario v : vocabularios) {
                     int idProducto = v.getIdVocabulario();
                     
-                    out.print(v.getDescripcion()+"<br>");
+                    out.print(v.getVocabulario()+"<br>");
                 }
             %>
         </div>
