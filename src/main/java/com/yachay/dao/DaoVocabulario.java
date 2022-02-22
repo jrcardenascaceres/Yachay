@@ -45,7 +45,7 @@ public class DaoVocabulario implements IVocabulario {
     public List<Vocabulario> obtenerVocabularios(String tipoVocabulario) {
         List<Vocabulario> vocabularios = new ArrayList();
         try {
-            String sql = "SELECT ID_VOCABULARIO, COD_VOCABULARIO, VOCABULARIO, DESCRIPCION, IMG_SENIA FROM DBINCLUSION.vocabulario WHERE TIPO = ?;";
+            String sql = "SELECT ID_VOCABULARIO, COD_VOCABULARIO, VOCABULARIO, DESCRIPCION, IMG_SENIA FROM DBINCLUSION.vocabulario WHERE TIPO = ? ORDER BY ID_VOCABULARIO ASC;";
             ps = cdb.getConnection().prepareStatement(sql);
             ps.setString(1, tipoVocabulario);
             rs = ps.executeQuery();

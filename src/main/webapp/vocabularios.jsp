@@ -16,7 +16,8 @@
                 for (Vocabulario v : vocabularios) {
                     int idProducto = v.getIdVocabulario();
                     
-                    out.print(v.getVocabulario()+"<br>");
+                    out.print(v.getVocabulario());
+                    out.print("<img src='assets/img/senias/" + v.getImgSenia() + "'>");
                 }
             %>
         </div>
