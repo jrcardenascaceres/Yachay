@@ -23,11 +23,26 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="numeros.jsp">Números</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+                        </li>                        
+                    </ul>  
+                    <img class= "navbar-brand" id="modoDia" onclick="cambioIcono()"
+                     src="assets/img/modo/dia.png" > 
+                </div>                  
+            </div>           
         </nav>
+        
+        <script>
+            function cambioIcono() {
+                var icono = document.getElementById('modoDia');
+                if (icono.src.match("noche")) {
+                    icono.src = "assets/img/modo/dia.png";
+                    document.body.style.backgroundColor = "black";
+                } else {
+                    icono.src = "assets/img/modo/noche.png";
+                    document.body.style.backgroundColor = "white";
+                }
+            }
+        </script>
         <div class="container">
             <div class="row">
                 <%
@@ -50,6 +65,19 @@
                 %>
             </div>
         </div>
+            
+            <script>
+            function cambioIcono() {
+                var icono = document.getElementById('modoDia');
+                if (icono.src.match("noche")) {
+                    icono.src = "assets/img/modo/dia.png";
+                    document.body.style.backgroundColor = "black";
+                } else {
+                    icono.src = "assets/img/modo/noche.png";
+                    document.body.style.backgroundColor = "white";
+                }
+            }
+         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

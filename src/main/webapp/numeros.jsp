@@ -19,15 +19,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href=".">Abecedario</a>
+                            <a class="nav-link" href=".">Abecedario</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="numeros.jsp">Números</a>
+                            <a class="nav-link active" href="numeros.jsp">Números</a>
                         </li>
-                    </ul>
+                    </ul>                    
                 </div>
+                <img id="modoDia" onclick="cambioIcono()"
+                     src="assets/img/modo/dia.png">    
             </div>
-        </nav>
+        </nav>    
+         
         <div class="container">
             <div class="row">
                 <%
@@ -51,6 +54,19 @@
                 %>
             </div>
         </div>
+            
+            <script>
+            function cambioIcono() {
+                var icono = document.getElementById('modoDia');
+                if (icono.src.match("noche")) {
+                    icono.src = "assets/img/modo/dia.png";
+                    document.body.style.backgroundColor = "black";
+                } else {
+                    icono.src = "assets/img/modo/noche.png";
+                    document.body.style.backgroundColor = "white";
+                }
+            }
+         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
